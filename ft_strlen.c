@@ -6,20 +6,18 @@
 /*   By: skhalil <skhalil@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 14:24:06 by skhalil        #+#    #+#                */
-/*   Updated: 2019/11/18 18:43:01 by skhalil       ########   odam.nl         */
+/*   Updated: 2019/12/01 13:49:57 by skhalil       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t		ft_strlen(const char *s)
 {
-	int i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != 0)
-	{
 		i++;
-	}
 	return (i);
 }

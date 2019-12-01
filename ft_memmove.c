@@ -6,20 +6,20 @@
 /*   By: skhalil <skhalil@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 13:31:06 by skhalil        #+#    #+#                */
-/*   Updated: 2019/11/10 19:11:42 by skhalil       ########   odam.nl         */
+/*   Updated: 2019/11/30 20:31:13 by skhalil       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	char	*dst_p;
-	char	*src_p;
+	unsigned char	*dst_p;
+	unsigned char	*src_p;
+	size_t			i;
 
-	dst_p = (char *)dst;
-	src_p = (char *)src;
+	dst_p = (unsigned char *)dst;
+	src_p = (unsigned char *)src;
 	i = 0;
 	if (dst == NULL && src == NULL)
 		return (NULL);
@@ -30,12 +30,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			i++;
 		}
 	else
-	{
 		while (len != 0)
 		{
 			dst_p[len - 1] = src_p[len - 1];
 			len--;
 		}
-	}
 	return (dst);
 }

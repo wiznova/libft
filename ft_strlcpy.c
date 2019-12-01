@@ -6,38 +6,27 @@
 /*   By: skhalil <skhalil@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 14:36:25 by skhalil        #+#    #+#                */
-/*   Updated: 2019/11/18 18:55:51 by skhalil       ########   odam.nl         */
+/*   Updated: 2019/12/01 13:57:54 by skhalil       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t		i;
-	size_t		stopper;
+	size_t	srclen;
 
-	i = 0;
-	stopper = 0;
-	if (dstsize == 0)
-		return (ft_strlen((char *)src));
-	if (!dst || !src)
-		return (0);
-	if (src[0] == '\0')
+	srclen = 0;
+	if (dst)
 	{
-		dst[stopper] = '\0';
-		return (i);
-	}
-	while (src[i])
-	{
-		if (i <= dstsize - 2)
+		srclen = ft_strlen(src);
+		if (srclen + 1 < dstsize)
+			ft_memcpy(dst, src, srclen + 1);
+		else if (dstsize != 0)
 		{
-			dst[i] = src[i];
-			stopper = i;
+			ft_memcpy(dst, src, dstsize - 1);
+			dst[dstsize - 1] = '\0';
 		}
-		i++;
 	}
-	dst[stopper + 1] = '\0';
-	return (i);
+	return (srclen);
 }

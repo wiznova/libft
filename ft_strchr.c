@@ -6,17 +6,19 @@
 /*   By: skhalil <skhalil@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 15:18:41 by skhalil        #+#    #+#                */
-/*   Updated: 2019/10/28 18:25:42 by skhalil       ########   odam.nl         */
+/*   Updated: 2019/12/01 13:52:18 by skhalil       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *str, int c)
 {
-	int		i;
+	size_t	i;
 	char	*ret;
 	char	letter;
 
-	letter = c;
+	letter = (char)c;
 	i = 0;
 	while (str[i] != letter && str[i] != '\0')
 		i++;

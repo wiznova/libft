@@ -6,38 +6,27 @@
 /*   By: skhalil <skhalil@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 16:24:14 by skhalil        #+#    #+#                */
-/*   Updated: 2019/11/18 18:41:33 by skhalil       ########   odam.nl         */
+/*   Updated: 2019/12/01 13:39:11 by skhalil       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
+
+static size_t	ft_strnlen(char *s, size_t n)
+{
+	size_t i;
+
+	i = 0;
+	while (s[i] && i < n)
+		i++;
+	return (i);
+}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	dlen;
-	size_t	slen;
-	size_t	i;
+    size_t len = ft_strnlen(dst, dstsize);
 
-	dlen = ft_strlen((char *)dst);
-	slen = ft_strlen((char *)src);
-	i = 0;
-	if (dlen >= dstsize)
-		return (dstsize + slen);
-	while (dlen + i < dstsize - 1 && src[i])
-	{
-		dst[dlen + i] = src[i];
-		i++;
-	}
-	if (src[i] == '\0')
-	{
-		dst[dlen + i] = '\0';
-		return (dlen + i);
-	}
-	if (dlen + i == dstsize - 1)
-	{
-		dst[dlen + i] = '\0';
-		return (dlen + slen);
-	}
-	return (dlen + slen);
+    if (dstsize < len)
+		return (len + ft_strlen(src));
+    return (len + ft_strlcpy(dst + len, src, dstsize - len));
 }
