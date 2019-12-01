@@ -6,7 +6,7 @@
 #    By: skhalil <skhalil@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/10/30 17:27:40 by skhalil        #+#    #+#                 #
-#    Updated: 2019/12/01 14:08:11 by skhalil       ########   odam.nl          #
+#    Updated: 2019/12/01 14:30:57 by skhalil       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ clean:
 	/bin/rm -f $(OBJS)
 
 fclean: clean
-	/bin/rm -f $(NAME) a.out
+	/bin/rm -f $(NAME)
 	/bin/rm -f $(BONUS_O)
 
 re: fclean all
