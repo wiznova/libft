@@ -6,12 +6,12 @@
 /*   By: skhalil <skhalil@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/03 19:54:48 by skhalil        #+#    #+#                */
-/*   Updated: 2019/11/10 20:19:14 by skhalil       ########   odam.nl         */
+/*   Updated: 2019/12/01 14:15:13 by skhalil       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include <stdlib.h>
+#include "libft.h"
 
 static int		sq10(int div)
 {

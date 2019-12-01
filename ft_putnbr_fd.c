@@ -6,13 +6,11 @@
 /*   By: skhalil <skhalil@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 20:14:21 by skhalil        #+#    #+#                */
-/*   Updated: 2019/11/08 20:27:55 by skhalil       ########   odam.nl         */
+/*   Updated: 2019/12/01 14:19:55 by skhalil       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {

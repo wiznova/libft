@@ -6,12 +6,11 @@
 /*   By: skhalil <skhalil@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 22:00:20 by skhalil        #+#    #+#                */
-/*   Updated: 2019/11/09 14:37:16 by skhalil       ########   odam.nl         */
+/*   Updated: 2019/12/01 14:17:01 by skhalil       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {

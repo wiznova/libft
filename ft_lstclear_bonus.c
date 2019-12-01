@@ -6,11 +6,11 @@
 /*   By: skhalil <skhalil@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/09 15:02:33 by skhalil        #+#    #+#                */
-/*   Updated: 2019/11/10 19:19:38 by skhalil       ########   odam.nl         */
+/*   Updated: 2019/12/01 14:17:50 by skhalil       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 #include <stdlib.h>
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))

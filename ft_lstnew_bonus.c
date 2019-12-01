@@ -6,11 +6,11 @@
 /*   By: skhalil <skhalil@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 21:19:55 by skhalil        #+#    #+#                */
-/*   Updated: 2019/11/10 19:08:19 by skhalil       ########   odam.nl         */
+/*   Updated: 2019/12/01 14:18:44 by skhalil       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 #include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
